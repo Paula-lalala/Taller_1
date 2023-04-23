@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Documento</title>
-    <link rel="stylesheet" href=" ">
+    <link rel="stylesheet" href="css/ejercicios.css">
 </head>
 
 <body>
     <section class="page-content">
+        <!-- ejercicio 1 -->
         <h1 class="titulo">CONTADOR DE TEXTOS</h1>
         <form class="texto-content">
                 <br><label>Texto: </label><br>
@@ -21,6 +22,7 @@
         </article>
         <br>
         <br>
+        <!-- ejercicio 2 -->
         <h1 class="titulo">VERIFICADOR DE TEXTOS</h1>
         <form class="texto-content">
                 <br><label>Texto: </label><br>
@@ -33,6 +35,7 @@
         </article>
         <br>
         <br>
+        <!-- ejercicio 3 -->
         <h1 class="titulo">VERIFICADOR DE EDAD</h1>
         <form class="texto-content">
                 <br><label>Nombre: </label><br>
@@ -50,25 +53,40 @@
         <!-- ejercicio 4 -->
         <h1>Verificar si se pasa o pierde una materia</h1>
     <section>
-        <label for="nombre">Nombre:</label>
+        <label name="nombre">Nombre:</label>
         <input type="text" id="nombre" required>
 
-        <label for="materia">Materia:</label>
+        <label name="materia">Materia:</label>
         <input type="text" id="materia" required>
 
-        <label for="nota1">Nota 1:</label>
+        <label name="nota1">Nota 1:</label>
         <input type="number" id="nota1" required max="5" min="0">
 
-        <label for="nota2">Nota 2:</label>
+        <label name="nota2">Nota 2:</label>
         <input type="number" id="nota2" required max="5" min="0">
 
-        <label for="nota3">Nota 3:</label>
+        <label name="nota3">Nota 3:</label>
         <input type="number" id="nota3" required max="5" min="0">
 
         <button id="verificar">Verificar</button>
     </section>
+    <br>
+    <br>
+        <!-- ejercicio 5 -->
 
-    <div id="resultado"></div>
+        <!-- ejercicio 6 -->
+        <div class="container">
+            <h1>Buscador de texto</h1>
+            <label for="texto">Ingresa un texto:</label>
+            <textarea id="texto" name="texto"></textarea>
+            <label for="buscar">Ingresa el texto que deseas buscar:</label>
+            <input type="text" id="buscar" name="buscar">
+            <button id="boton-buscar">Buscar</button>
+            <div id = "resultado" class="texto"></div>
+          </div>
+          <div id="resultado"></div>
+    <br>
+    <br>
         <!-- ejercicio 8 -->
         <h1 class="titulo">VERIFICADOR DE NUMEROS DIVISIBLES</h1>
         <form class="texto-content">
