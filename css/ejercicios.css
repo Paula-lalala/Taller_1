@@ -41,3 +41,11 @@ section {
   border-style:dashed;
 background-color: rgba(112, 195, 255, 0.74);
 }
+
+.prom{
+    margin-top: 10pt;
+    color: #000000;
+  border-color: rgb(255, 255, 255);
+  border-style:dashed;
+background-color: rgba(112, 195, 255, 0.74);
+}

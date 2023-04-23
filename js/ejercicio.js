@@ -101,19 +101,19 @@ document.getElementById('btn_divNum')
     if (!num1 || !num2) {
         document.getElementById("divResultado").innerText = ("Debe rellenar los campos completos");
     } else {
-        if(num1%2!=0||num1<0){
+        if(num1%1!=0||num1<0){
             if(num1<0){
                 document.getElementById("divResultado").innerHTML = num1+(" No es un numero entero");
-            }if(num1%2!=0){
+            }if(num1%1!=0){
             document.getElementById("divResultado").innerHTML = num1+(" No es un numero entero");}
-            if(num1%2!=0&&num1<0){
+            if(num1%1!=0&&num1<0){
             document.getElementById("divResultado").innerHTML = num1+(" No es un numero entero positivo");}
             if(num2%2!=0||num2<0){
                 if(num2<0){
                     document.getElementById("divResultado").innerHTML = num2+(" No es un numero positivo");
-                }if(num2%2!=0){
+                }if(num2%1!=0){
                 document.getElementById("divResultado").innerHTML = num2+(" No es un numero entero");}
-                if(num2%2!=0&&num2<0){
+                if(num2%1!=0&&num2<0){
                 document.getElementById("divResultado").innerHTML = num2+(" No es un numero entero positivo");}
             }}
         else{
