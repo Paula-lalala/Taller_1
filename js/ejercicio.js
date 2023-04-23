@@ -55,24 +55,37 @@ document.getElementById("verificar").addEventListener("click", function() {
         document.getElementById("resultado").textContent = 'Lo siento '+nombre+', su nota es '+promedio.toFixed(2)+', perdiste la materia '+materia;
     }
 });
+//ejercicio 5
+document.getElementById('btn_idNumPar')
+.addEventListener('click', function recorrido() {
+    let numero = document.getElementById('ingNum').value;
+    if (!numero) {
+        document.getElementById("verNumero").innerText = ("Debe rellenar los campos completos");
+    } else {
+        if(isNaN(numero)||numero%2!=0 ||numero<0){
+            document.getElementById("verNumero").innerHTML = numero+" Debe ingresar numeros enteros positivos";
+        }else{
+        if(numero/2==0){
+            document.getElementById("verNumero").innerHTML = numero+" es par";
+        }else{
+            document.getElementById("verNumero").innerHTML = numero+" es impar";
+        }}
+    }
+});
 
 //ejercicio 6
-const texto = document.getElementById('texto');
-const buscar = document.getElementById('buscar');
-const botonBuscar = document.getElementById('boton-buscar');
 
-botonBuscar.addEventListener('click', () => {
-  const textoValue = texto.value;
-  const buscarValue = buscar.value;
-
-  if (buscarValue != '') {
+document.getElementById('boton-buscar').addEventListener('click', function () {
+    let texto = document.getElementById('textoVer').value;
+    let buscar = document.getElementById('buscar').value;
+  if (buscar != '') {
     const regex = new RegExp(buscarValue, 'gi');
-    const resultado = textoValue.replace(regex, (match) => {
+    const resultado = texto.replace(regex, (match) => {
       return '<span class="resaltado">' + match + '</span>';
     });
-    document.getElementById('resultado').innerHTML = resultado;
+    document.getElementById('identificado').innerHTML = resultado;
   } else {
-    document.getElementById('resultado').innerHTML = textoValue;
+    document.getElementById('identificado').innerHTML = textoValue;
   }
 });
 
@@ -86,11 +99,15 @@ document.getElementById('btn_idNum')
         let numerosRec='';
         let recorrer= numero.split(',');
         for(let numero of recorrer){
-        if(numero%2==0){
+        if(isNaN(numero)||numero%2!=0){
+            numerosRec+= "<br> "+numero+ " No es un numero entero";
+        }else{
+        if(numero/2==0){
             numerosRec+= "<br> "+numero+" es número par";
         }else{
             numerosRec+="<br> "+ numero+" es impar";
         }}
+        }
         document.getElementById("verNumero").innerHTML = numerosRec;
     }
 });
