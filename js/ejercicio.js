@@ -79,8 +79,8 @@ document.getElementById('boton-buscar').addEventListener('click', function () {
     let texto = document.getElementById('textoVer').value;
     let buscar = document.getElementById('buscar').value;
   if (buscar != '') {
-    const regex = new RegExp(buscarValue, 'gi');
-    const resultado = texto.replace(regex, (match) => {
+    let regex = new RegExp(buscarValue, 'gi');
+    let resultado = texto.replace(regex, (match) => {
       return '<span class="resaltado">' + match + '</span>';
     });
     document.getElementById('identificado').innerHTML = resultado;

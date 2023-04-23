@@ -1,3 +1,30 @@
+.page-content{
+    background-color: #55ff4f;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+  color: #000000;
+  border-radius: 1px;
+  border-color: black;
+  border-style: double;
+
+}
+
+.texto-content{
+    background-color: aliceblue;
+    border-radius: 15px;
+    border-color: black;
+    border-style: double;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
 .resaltado {
     color: red;
   }
