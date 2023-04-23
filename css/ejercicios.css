@@ -1,5 +1,9 @@
+body{
+    background-color: aquamarine;
+}
 .page-content{
-    background-color: #55ff4f;
+    display: flex;
+    background-color: whitesmoke;
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -9,14 +13,14 @@ h1 {
   border-radius: 1px;
   border-color: black;
   border-style: double;
-
+background-color: aliceblue;
 }
 
 .texto-content{
     background-color: aliceblue;
     border-radius: 15px;
     border-color: black;
-    border-style: double;
+    border-style:solid;
 }
 
 section {
@@ -25,6 +29,15 @@ section {
   align-items: center;
   margin-top: 50px;
 }
+
 .resaltado {
     color: red;
   }
+
+.texto_resultado{
+    margin-top: 10pt;
+    color: #000000;
+  border-color: rgb(255, 255, 255);
+  border-style:dashed;
+background-color: rgba(112, 195, 255, 0.74);
+}

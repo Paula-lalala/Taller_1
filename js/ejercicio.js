@@ -62,10 +62,10 @@ document.getElementById('btn_idNumPar')
     if (!ingNumero) {
         document.getElementById("parImpar").innerText = ("Debe rellenar los campos completos");
     } else {
-        if(isNaN(ingNumero)||ingNumero%2!=0||ingNumero<0){
+        if(isNaN(ingNumero)||ingNumero%1!=0||ingNumero<0){
             document.getElementById("parImpar").innerHTML = (" Debe ingresar numeros enteros positivos");
         }else{
-        if(ingNumero/2==0){
+        if(ingNumero%2==0){
             document.getElementById("parImpar").innerHTML = ingNumero+" es par";
         }else{
             document.getElementById("parImpar").innerHTML = ingNumero+" es impar";
@@ -74,13 +74,16 @@ document.getElementById('btn_idNumPar')
 });
 
 //ejercicio 6
+let texto = document.getElementById('textoVer');
+let buscar = document.getElementById('buscar');
 
-document.getElementById('boton-buscar').addEventListener('click', function () {
-    let texto = document.getElementById('textoVer').value;
-    let buscar = document.getElementById('buscar').value;
-  if (buscar != '') {
+document.getElementById('btn_bus').addEventListener('click', function() {
+  let textoValue = texto.value;
+  let buscarValue = buscar.value;
+
+  if (buscarValue != '') {
     let regex = new RegExp(buscarValue, 'gi');
-    let resultado = texto.replace(regex, (match) => {
+    let resultado = textoValue.replace(regex, function (match) {
       return '<span class="resaltado">' + match + '</span>';
     });
     document.getElementById('identificado').innerHTML = resultado;
@@ -88,6 +91,7 @@ document.getElementById('boton-buscar').addEventListener('click', function () {
     document.getElementById('identificado').innerHTML = textoValue;
   }
 });
+
 
 //ejercicio 7
 document.getElementById('btn_divNum')
@@ -131,10 +135,10 @@ document.getElementById('btn_idNum')
         let numerosRec='';
         let recorrer= numero.split(',');
         for(let numero of recorrer){
-        if(isNaN(numero)||numero%2!=0){
+        if(isNaN(numero)||numero%1!=0){
             numerosRec+= "<br> "+numero+ " No es un numero entero";
         }else{
-        if(numero/2==0){
+        if(numero%2==0){
             numerosRec+= "<br> "+numero+" es número par";
         }else{
             numerosRec+="<br> "+ numero+" es impar";
