@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documento</title>
+    <link rel="stylesheet" href="css\modal.css">
+    <link rel="stylesheet" href="css\page.css">
+</head>
+
+<body>
+    <section class="page-content">
+        <h1 class="titulo">CONTADOR DE TEXTOS</h1>
+        <form class="texto-content">
+                <br><label>Texto: </label><br>
+                <textarea name="texto" required cols="80" rows="10"
+                placeholder="Ingrese aqui el texto" onkeyup="countChars(this);"></textarea>
+            <br>
+        </form>
+        <article class="texto_resultado">
+            <p id="charNum">0 caracteres</p>
+        </article>
+    </section>
+
+    <script src="js/ejer1.js"></script>
+</body>
