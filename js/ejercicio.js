@@ -57,18 +57,18 @@ document.getElementById("verificar").addEventListener("click", function() {
 });
 //ejercicio 5
 document.getElementById('btn_idNumPar')
-.addEventListener('click', function recorrido() {
-    let numero = document.getElementById('ingNum').value;
-    if (!numero) {
-        document.getElementById("verNumero").innerText = ("Debe rellenar los campos completos");
+.addEventListener('click', function () {
+    let ingNumero = document.getElementById('ingNum').value;
+    if (!ingNumero) {
+        document.getElementById("parImpar").innerText = ("Debe rellenar los campos completos");
     } else {
-        if(isNaN(numero)||numero%2!=0 ||numero<0){
-            document.getElementById("verNumero").innerHTML = numero+" Debe ingresar numeros enteros positivos";
+        if(isNaN(ingNumero)||ingNumero%2!=0||ingNumero<0){
+            document.getElementById("parImpar").innerHTML = (" Debe ingresar numeros enteros positivos");
         }else{
-        if(numero/2==0){
-            document.getElementById("verNumero").innerHTML = numero+" es par";
+        if(ingNumero/2==0){
+            document.getElementById("parImpar").innerHTML = ingNumero+" es par";
         }else{
-            document.getElementById("verNumero").innerHTML = numero+" es impar";
+            document.getElementById("parImpar").innerHTML = ingNumero+" es impar";
         }}
     }
 });
@@ -87,6 +87,38 @@ document.getElementById('boton-buscar').addEventListener('click', function () {
   } else {
     document.getElementById('identificado').innerHTML = textoValue;
   }
+});
+
+//ejercicio 7
+document.getElementById('btn_divNum')
+.addEventListener('click', function () {
+    let num1 = document.getElementById('divNum').value;
+    let num2 = document.getElementById('divNum2').value;
+    if (!num1 || !num2) {
+        document.getElementById("divResultado").innerText = ("Debe rellenar los campos completos");
+    } else {
+        if(num1%2!=0||num1<0){
+            if(num1<0){
+                document.getElementById("divResultado").innerHTML = num1+(" No es un numero entero");
+            }if(num1%2!=0){
+            document.getElementById("divResultado").innerHTML = num1+(" No es un numero entero");}
+            if(num1%2!=0&&num1<0){
+            document.getElementById("divResultado").innerHTML = num1+(" No es un numero entero positivo");}
+            if(num2%2!=0||num2<0){
+                if(num2<0){
+                    document.getElementById("divResultado").innerHTML = num2+(" No es un numero positivo");
+                }if(num2%2!=0){
+                document.getElementById("divResultado").innerHTML = num2+(" No es un numero entero");}
+                if(num2%2!=0&&num2<0){
+                document.getElementById("divResultado").innerHTML = num2+(" No es un numero entero positivo");}
+            }}
+        else{
+        if(num1%num2==0){
+            document.getElementById("divResultado").innerHTML = num1+" es divisible entre "+ num2;
+        }else{
+            document.getElementById("divResultado").innerHTML = num1+" no es divisible entre "+ num2;
+        }}
+    }
 });
 
 //ejercicio 8
